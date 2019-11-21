@@ -1,0 +1,41 @@
+package main
+
+import "fmt"
+
+var (
+	aa string
+	bb int
+	cc bool
+)
+
+// 这里是 全局定义多个变量 注意这里是()
+func main() {
+
+	// 声明变量的方式
+
+	//var  变量名字  变量类型
+	var a string = "333"
+	var b int = 33
+	var c bool = true
+
+	//对应的默认字符串的值
+	//var a string ""
+	//var b int 0
+	//var c  bool  false
+
+	fmt.Print(a,b,c)
+
+	//被定义的变量不能再声明赋值
+	
+	//上面有了 a变量不能再定义
+	//var a = "eee"
+	 
+	//类型推导方式 2种方式
+	var dd = "name"
+	ff := "name"
+    fmt.Println(dd,ff)	
+	
+	
+}
+
+
