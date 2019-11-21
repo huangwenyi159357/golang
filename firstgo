@@ -1,0 +1,12 @@
+package main  
+//可执行程序的包名字  go通过包名来管理命名空间
+
+
+import "fmt"
+// 用 import 导入包文件
+func main()  {
+// func 关键字定义 函数 
+
+	fmt.Print("hello world")
+
+}
