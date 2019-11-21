@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+const c =333
+const(
+	a = 33
+	b = 33
+)
+
+const (
+	n1 =100
+	n2
+	n3
+)
+
+const (
+	m1 = iota
+	m2 = iota
+	m3 = iota
+	//在const关键字出现时将被重置为0。const中每新增一行常量声明将使iota计数一次(iota可理解为const语句块中的行索引)
+)
+func main() {
+
+	fmt.Print(n1,n2,n3) //都是 100
+
+	fmt.Print(m1,m2,m3)
+}
