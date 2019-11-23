@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	a := "eeee" // ""号表示一个字符串
+	b := 'a' // ''号表示的是一个字符  rune  utf-8 编码 指的是单个字符
+
+	fmt.Print(a,b)
+
+	//如果要改变字符串的其中的某个字符 只能
+
+	c :=[]rune(a)  // 把字符串转换成切片
+	c[0] = 'a'
+	fmt.Print(string(c) ,len(a)) // 把切片在转换成字符
+}
