@@ -1,0 +1,42 @@
+package main
+
+import (
+	"fmt"
+)
+
+func printArray(arr *[5]int)  {
+	for i,_ :=range arr{
+		fmt.Print(arr[i])
+	}
+}
+func main() {
+	//数组定义 var 变量名 [长度] 类型
+	var array1 [6] int
+
+	//数组初始化方式1
+	array2 := [5]int {1,2,3,4,5}  //这个方式必须定义后面的数组值
+	//数组初始化方式2 根据初始值推断
+	array3 := [...]int {23,1,2,3,4} //默认让编译器为你数
+	// 数组初始化方式3 根据键和值来构建数组
+
+	array4 :=[5]int {0:1 ,4:3}
+	fmt.Println(array1,array2,array3,array4)
+
+	// 数组的循环遍历
+
+	citys := [...]string {"e","f","v","g"}
+
+	for i:=0;i<len(citys);i++ {
+		fmt.Println(citys[i])
+	}
+
+
+	// for range
+
+
+	for i,v :=range  citys{
+		fmt.Println(i ,v)
+	}
+
+
+}
