@@ -37,6 +37,28 @@ func main() {
 	for i,v :=range  citys{
 		fmt.Println(i ,v)
 	}
+ //多维数组
+	 var d [3][2]int
+
+	 d = [3][2]int{
+	 	[2]int{1,2},
+	 	[2]int{3,4},
+	 	[2]int{5,6},
+	 }
+
+	 fmt.Println(d)
+
+	 //多维数组的循环
+
+	 for _,v := range d{
+	 	
+		 for i,k := range v {
+		 	println(i,k)
+
+		 }
+	 }
+
+
 
 
 }
