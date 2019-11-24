@@ -1,0 +1,69 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// slice的定义 和数组有区别不需要定义长度
+	// 切片是引用类型 不能和值类型比较 只能和 nil 比较
+
+	var a [] int    // int 类型的切片
+	var b [] string // string 类型的切片
+
+	//a 和  b == nil 没有分配内存空间
+
+	fmt.Printf("%T", a)
+	fmt.Printf("%T", b)
+	//切边的初始化
+	a = []int{1, 2, 3}
+	b = []string{"a", "b", "c"}
+	fmt.Print(a, b)
+
+	// 有数组得到切片
+	d := [...]int{1, 3, 4, 6, 7}
+	g := d[0:4] // 取数组的 0-4 的数 不包含
+
+	fmt.Println(g)
+
+	//切片的扩容问题
+
+	fmt.Printf("长度 : %d  容量: %d", len(a), cap(a))
+
+	h := d[0:4]
+	i := d[1:3]
+	//注意容量的计算是根据底层数组来计算的 必须是[0]开始计算 如果不是重0开始的那么底层容量必须减少对应的数值
+	fmt.Printf("长度 : %d  容量: %d", len(h), cap(h))
+	fmt.Printf("长度 : %d  容量: %d", len(i), cap(i))
+
+	// 切片的初始化 3
+
+	s4 := make([]int, 4, 5)
+	s4 = a
+	fmt.Println(s4, a)
+
+	s9 := []int{1, 2, 3}
+
+	s9 = append(s9, 4)
+	fmt.Println(s9)
+
+	str := []int{1, 3, 4, 5, 6}
+
+	data := append(str, a...) //...表示讲切片拆开
+	fmt.Println(data)
+
+	//slice 的删除
+
+	i = append(str[:1], str[2:]...)
+	fmt.Print(i)
+
+	var bb= make([]int, 5, 10)
+	var gg []int
+    fmt.Println(gg)
+	for j:=0;j<10;j++{
+	  gg =append(bb,j)
+	  fmt.Println(gg)
+
+	}
+	fmt.Print(gg)
+}
